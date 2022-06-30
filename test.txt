@@ -1,0 +1,207 @@
+Variables y operaciones
+1 Responde las siguientes preguntas en la sección de comentarios:
+    ¿Qué es una variable y para qué sirve?
+        Un área de memoria reservada para almacenar información
+    ¿Cuál es la diferencia entre declarar e inicializar una variable?
+        Declarar únicamente es reservar el espacio de memoria, inicializar es asignar un valor a este espacio de memoria reservado.
+    ¿Cuál es la diferencia entre sumar números y concatenar strings?
+        Un valor numérico usa menos bytes en memoria y se pueden hacer operaciones aritméticas con el, los valores string usan 8bytes por cada carácter y no se suman, al concatenar strings se ponen uno a un costado sin realizar operaciones aritméticas 
+        Numérico: 8 + 4 = 12
+        String: “8”+”4”=”84”
+    ¿Cuál operador me permite sumar o concatenar?
+        +
+2 Determina el nombre y tipo de dato para almacenar en variables la siguiente información:
+    Nombre
+       	string
+    Apellido
+	    string
+    Nombre de usuario en Platzi
+    	string
+	Edad
+    	numérico
+	Correo electrónico
+    	string
+	Mayor de edad
+    	boleano
+	Dinero ahorrado
+    	numérico
+	Deudas
+    	numérico
+3 Traduce a código JavaScript las variables del ejemplo anterior y deja tu código en los comentarios.
+	let nombre;
+	let apellido;
+    let usuairoPlatzi;
+    let fechaNacimiento;
+    let email;
+    let mayorEdad;
+    let ahorro;
+    let dauda;
+
+
+4 Calcula e imprime las siguientes variables a partir de las variables del ejemplo anterior:
+	Nombre completo (nombre y apellido)
+        const nombreCompleto = nombre + ' ' +apellido;
+	Dinero real (dinero ahorrado menos deudas)
+        const capital = ahorro - dauda;
+
+
+Funciones
+1 Responde las siguientes preguntas en la sección de comentarios:
+	¿Qué es una función?
+        un conjunto de instrucciones construidas para obtener un resultado especifico.
+	¿Cuándo me sirve usar una función en mi código?
+        para reutilizar código, ordenado y de fácil mantenimiento.
+	¿Cuál es la diferencia entre parámetros y argumentos de una función?
+        los parametros son las variables que se establecen en la declaración de la función, los argumentos son los valores que se envían al momento de que esta función es llamada.
+        parametros: function ejemplo (a, b)
+        argumentos: valor = ejemplo(2, 3);
+
+2 Convierte el siguiente código en una función, pero, cambiando cuando sea necesario las variables constantes por parámetros y argumentos en una función:
+    const name = "Juan David";
+    const lastname = "Castro Gallego";
+    const completeName = name + lastname;
+    const nickname = "juandc";
+
+    console.log("Mi nombre es " + completeName + ", pero prefiero que me digas " + nickname + ".");
+
+        function presentacion (first, last, nick){
+            return "Mi nombre es " + first + " " + last + ", pero prefiero que me digas " + nick + ".";
+        }
+        console.log(presentacion(name, lastname, nickname));
+ 
+ Condicionales
+1 Responde las siguientes preguntas en la sección de comentarios:
+	¿Qué es una condicional?
+        es una estructura de control que permite seleccionar una secuencia de instrucciones dependiendo del resultado de una comparación
+	¿Qué tipos de condicionales existen en JavaScript y cuáles son sus diferencias?
+        if puede selecionar entre 2 resultados boleanos, tambien se pueden anidar para más resultados.
+        switch se puede asignar una condicion con múltiples opciones.
+	¿Puedo combinar funciones y condicionales?
+        si se puede
+
+2 Replica el comportamiento del siguiente código que usa la sentencia switch utilizando if, else y else if:
+    const tipoDeSuscripcion = "Basic";
+
+    switch (tipoDeSuscripcion) {
+        case "Free":
+            console.log("Solo puedes tomar los cursos gratis");
+            break;
+        case "Basic":
+            console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+            break;
+        case "Expert":
+            console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+            break;
+        case "ExpertPlus":
+            console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+            break;
+    }
+    if (tipoDeSuscripcion == "Free"){
+        console.log("Solo puedes tomar los cursos gratis");
+    }
+    elseif (tipoDeSuscripcion == "Basic"){
+        console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+    }
+    elseif (tipoDeSuscripcion == "Expert"){
+        console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+    }
+    elseif (tipoDeSuscripcion == "ExpertPlus"){
+        console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+    }
+
+3 Replica el comportamiento de tu condicional anterior con if, else y else if, pero ahora solo con if (sin else ni else if).
+Bonus: si ya eres una experta o experto en el lenguaje, te desafío a comentar cómo replicar este comportamiento con arrays y un solo condicional. 😏
+const suscripciones = [
+        {tipo:"Free", descripcion:"Solo puedes tomar los cursos gratis"}, 
+        {tipo:"Basic", descripcion:"Puedes tomar casi todos los cursos de Platzi durante un mes"}, 
+        {tipo:"Expert", descripcion:"Puedes tomar casi todos los cursos de Platzi durante un año"}, 
+        {tipo:"ExpertPlus", descripcion:"Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año"}];
+    const tipoDeSuscripcion = "Expert";
+    suscripciones.forEach (objet=>{
+        if(objet.tipo == tipoDeSuscripcion){
+            console.log(objet.descripcion);
+        }
+    });
+
+Ciclos
+1 Responde las siguientes preguntas en la sección de comentarios:
+	¿Qué es un ciclo?
+        Es una estructura de control que permite repetir varias veces un bloque de cóigo.
+	¿Qué tipos de ciclos existen en JavaScript?
+        for, while, dowhile
+	¿Qué es un ciclo infinito y por qué es un problema?
+        un ciclo que no se especifico un límite de repeticiones y es un problema porque puede desbordar la memoria o acabar los recursos de ejecución del programa
+	¿Puedo mezclar ciclos y condicionales?
+        si se puede
+2 Replica el comportamiento de los siguientes ciclos for utilizando ciclos while:
+    for (let i = 0; i < 5; i++) {
+        console.log("El valor de i es: " + i);
+    }
+    for (let i = 10; i >= 2; i--) {
+        console.log("El valor de i es: " + i);
+    }
+
+    let i=0;
+    while (i<5){
+        console.log("El valor de i es: " + i);
+        i++;
+    }
+    let i=10;
+    while (i>=2){
+        console.log("El valor de i es: " + i);
+        i--;
+    }
+
+3 Escribe un código en JavaScript que le pregunte a los usuarios cuánto es 2 + 2. Si responden bien, mostramos un mensaje de felicitaciones, pero si responden mal, volvemos a empezar.
+Pista: puedes usar la función prompt de JavaScript.
+
+    let respuesta = 0;
+    let resultado = 4;
+    while (resultado != respuesta){
+        respuesta = prompt('Cuanto esa 2 + 2?');    
+    }
+    alert("Felicidades");
+
+Listas
+1 Responde las siguientes preguntas en la sección de comentarios:
+	¿Qué es un array?
+        es una colección de datos del mismo tipo
+	¿Qué es un objeto?
+        es una colección de datos de tipos mixtos
+	¿Cuándo es mejor usar objetos o arrays?
+
+	¿Puedo mezclar arrays con objetos o incluso objetos con arrays?
+        si ae puede
+2 Crea una función que pueda recibir cualquier array como parámetro e imprima su primer elemento.
+    let comida = ["frutas", "cereales", "lácteos", "carnes"];
+    function primerElemento (arreglo){
+        console.log(arreglo[0]);
+    }
+    primerElemento(comida);
+
+3 Crea una función que pueda recibir cualquier array como parámetro e imprima todos sus elementos uno por uno (no se vale imprimir el array completo).
+    let comida = ["frutas", "cereales", "lácteos", "carnes"];
+    function todosElementos (arreglo){
+        arreglo.forEach(function(elemento, indice, array){
+            console.log(elemento);
+        });
+    }
+    todosElementos(comida);
+
+4 Crea una función que pueda recibir cualquier objeto como parámetro e imprima todos sus elementos uno por uno (no se vale imprimir el objeto completo).
+    let empleado = [
+        {id:1, nombre:"Adrián", apellido:"Valdez", edad:40, tipoDeSuscripcion:"Expert"},
+        {id:2, nombre:"Francisco", apellido:"Del Rio", edad:46, tipoDeSuscripcion:"Basic"},
+        {id:3, nombre:"Gladys", apellido:"Cárdenas", edad:39, tipoDeSuscripcion:"ExpertPlus"},
+        {id:4, nombre:"Ramón", apellido:"Zavala", edad:42, tipoDeSuscripcion:"Free"},
+    ];
+
+    function todosElementos (arreglo){
+        arreglo.forEach(function(elemento, array){
+                for (let atributo in elemento){
+                    console.log(`${atributo}: ${elemento[atributo]}`);
+                }
+            
+        });
+    }
+    todosElementos(empleado);
