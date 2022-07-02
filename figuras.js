@@ -112,3 +112,43 @@ function calcularAreaCirculo (){
     const area = areaCirculo(value);
     alert(area);
 }
+function calcularPitagoras (cateto1, hipotenusa){
+// la suma del cuadrado de los catetos es igual al cuadrado de la hipotenusa
+// hip¬2 = cat1¬2 + cat2¬2
+// hip-2 - cat1-2 = cat2-2
+// sqrt(hip-1 - cat1-2) = cat2
+    return Math.sqrt(Math.pow(cateto1,2)-Math.pow(hipotenusa,2))
+}
+function verificarTipoTriangulo (){
+    const input1 = document.getElementById("ladoTriangulo1");
+    const value1 = parseInt(input1.value);
+    const input2 = document.getElementById("ladoTriangulo2");
+    const value2 = parseInt(input2.value);
+    const input3 = document.getElementById("baseTriangulo");
+    const value3 = parseInt(input3.value);
+    let cat = 0; let hip =0;
+    if (value1 == value2 && value1 == value3){
+        console.log("Es un triangulo equilatero");
+        cat = value1; hip=value3;
+    }
+    else
+        if (value1 == value2){
+            console.log("lado1 " + value1+ " y lado2 " + value2 +" son iguales "+value3+" es distinto");
+            if (value1 + value2 < value3) {
+                console.log("No es un triangulo valido");
+            }
+            else
+                console.log("Es un triangulo valido");
+        }
+        else
+            if (value1 == value3){
+                console.log("lado1 y base son iguales");
+            }
+            else
+                if (value2 == value3){
+                    console.log("Lado2 y base son iguales");
+                }
+                else
+                    console.log("es un triangulo escaleno");
+    console.log("Su altura es " + calcularPitagoras(cat, (hip/2)));
+}
