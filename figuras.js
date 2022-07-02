@@ -45,3 +45,4 @@ console.log("El perimetro del circulo mide " + perimetroCirculo + " cm");
 console.log("El área del circulo mide " + areaCirculo + " cm");
 
 console.groupEnd();
+*/
