@@ -1,6 +1,7 @@
-# Taller #1: figuras geométricas
+## Taller #1: figuras geométricas
 
 - Primer paso: definir las fórmulas
 - Segundo paso: implementar las fórmulas en JavaScript
 - Tercer paso: crear funciones.
 - Cuarto paso: integrar JS con HTML
+\clases\2327-javascript-practico-2021\38661-interactuando-con-javascript-desde-html\
