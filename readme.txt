@@ -17,3 +17,5 @@
 - Primer paso: definir las fórmulas.
 - Segundo paso: implementar las fórmulas en JavaScript.
 - Tercer paso: Crear funciones.
+
+## Taller 3: Analisis de Salarios
