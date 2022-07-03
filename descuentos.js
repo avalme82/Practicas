@@ -9,3 +9,8 @@ function onClickButtonPriceDiscount(){
     const resultPrice = document.getElementById("resultPrice");
     resultPrice.innerText = "El precio con descuento son: $"+calcularPrecioConDescuento(priceValue,discountValue);
 }
+const coupons = [
+    "Avalme_es_Batman",
+    "pero_no_le_digan_a_nadie",
+    "es_un_secreto",
+];
