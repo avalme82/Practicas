@@ -1,4 +1,4 @@
-function calcularPromedio (lista){
-    const sumaLista = lista.reduce( function (acumulado = 0, nuevo){ return acumulado + nuevo; } );
-    return sumaLista/lista.length;
+function calcularMediaAritmetica (list){
+    const sumList = list.reduce( function (sum=0,newItem){ return sum+newItem; } );
+    return sumList/list.length;
 }
