@@ -9,6 +9,6 @@ function onClickCheckSplit(tip){
     checkTip.innerText = formatPrecision(tipByCheck);
     const checkSplit = document.getElementById("checkSplit");
     checkSplit.innerText = formatPrecision((inputCheck+tipByCheck)/inputPeople);
-    const tipSplit = document.getElementById("tipSplit");
-    tipSplit.innerText = formatPrecision(tipByCheck/inputPeople);
+    document.getElementById("tipSplit").innerText = formatPrecision(tipByCheck/inputPeople);
+//    const tipSplit = tipSplit.innerText = ;
 }
