@@ -3,12 +3,12 @@ function onClickCheckSplit(tip){
     const inputCheck = parseFloat(document.getElementById("check").value);
     const inputPeople = parseInt(document.getElementById("people").value);
     const tipByCheck = (inputCheck*tip)/100;
-    const checkTipIncluded = document.getElementById("checkTipIncluded");
-    checkTipIncluded.innerText = formatPrecision(inputCheck+tipByCheck);
-    const checkTip = document.getElementById("checkTip");
-    checkTip.innerText = formatPrecision(tipByCheck);
-    const checkSplit = document.getElementById("checkSplit");
-    checkSplit.innerText = formatPrecision((inputCheck+tipByCheck)/inputPeople);
+    document.getElementById("checkTipIncluded").innerText = formatPrecision(inputCheck+tipByCheck);
+    document.getElementById("checkTip").innerText = formatPrecision(tipByCheck);
+    document.getElementById("checkSplit").innerText = formatPrecision((inputCheck+tipByCheck)/inputPeople);
     document.getElementById("tipSplit").innerText = formatPrecision(tipByCheck/inputPeople);
-//    const tipSplit = tipSplit.innerText = ;
+/*   const checkTipIncluded = checkTipIncluded;
+    const checkTip = checkTip;
+    const checkSplit = checkSplit;
+//    const tipSplit = tipSplit.innerText = ;*/
 }
