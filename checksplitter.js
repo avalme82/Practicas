@@ -7,8 +7,4 @@ function onClickCheckSplit(tip){
     document.getElementById("checkTip").innerText = formatPrecision(tipByCheck);
     document.getElementById("checkSplit").innerText = formatPrecision((inputCheck+tipByCheck)/inputPeople);
     document.getElementById("tipSplit").innerText = formatPrecision(tipByCheck/inputPeople);
-/*   const checkTipIncluded = checkTipIncluded;
-    const checkTip = checkTip;
-    const checkSplit = checkSplit;
-//    const tipSplit = tipSplit.innerText = ;*/
 }
